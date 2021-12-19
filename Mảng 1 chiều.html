@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* let N = prompt('Nhập số lượng phần tử của mảng');*/
+    let N=10;
+    let array = [];
+    for (let i = 0; i<N; i++) {
+        let a = Math.floor(Math.random() * 20) + 1;       /*Gán a giá trị chứa ngẫu nhiên
+                                                          N số bất kỳ trong khoảng từ 1 tới 20*/
+        array.push(a)             /*Thêm a vào mảng array*/
+    }
+    let string = array.toString();
+    console.log(string);
+
+
+
+    /*bài 1*/
+    let value = parseInt(prompt("Nhập số gì đó: "));
+
+    let index = -1;     /*tìm trong mảng*/
+    for (let j = 0; j < array.length; j++) {
+        if (value === array[j]) {
+            index = j;
+            break;
+        }
+    }
+    if (index === -1) {
+        console.log('không có phần tử này trong mảng');
+    } else {
+        console.log(value+' '+'nằm ở vị trí'+' '+index);
+    }
+
+
+
+    /*bài 2*/
+    let sub = 1 /*biến tích*/
+    for (let i = 0; i <array.length; i++) {
+        sub *= array[i]
+    }
+    console.log("tích là "+sub)
+
+
+    /*bài 3*/
+    let dem = 0;
+    for (let i = 0; i<array.length; i++){
+        if (value === array[i]) {
+            dem +=1;
+        }
+    }
+    console.log("Số lần lặp là "+dem)
+</script>
+</body>
+</html>
